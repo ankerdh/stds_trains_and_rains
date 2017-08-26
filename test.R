@@ -1,3 +1,4 @@
+install.packages("rgdal")
 library(rgdal)
 library(ggmap)
 library(dplyr)
@@ -19,3 +20,6 @@ ggmap(gbr_map)+
 
 str(data)
 summary(data)
+
+
+cars<-mtcars
