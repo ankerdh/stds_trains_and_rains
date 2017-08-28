@@ -2,9 +2,10 @@ library(rgdal)
 library(dplyr)
 library(ggplot2)
 library(ggmap)
+install.packages("ggrepel")
 library(ggrepel)
 
-data<-readOGR(dsn="C:/Users/ankerd/Desktop/MDSI/zipfolder",layer="Great_Barrier_Reef_Features")
+#Read in gbr.RData file
 
 data2 <- list("index"=1:nrow(data), "feat"=data$FEAT_NAME, "name"=data$GBR_NAME, "lon"=data$X_COORD, "lat"=data$Y_COORD, "area"=data$Area_HA)
 df <- as.data.frame(data2)
